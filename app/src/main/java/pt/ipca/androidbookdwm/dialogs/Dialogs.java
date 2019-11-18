@@ -13,13 +13,17 @@ public class Dialogs {
         AlertDialog alertDialog = new AlertDialog.Builder(context).create();
         alertDialog.setTitle(alertConfig.getTitle());
         alertDialog.setMessage(alertConfig.getMessage());
+
         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, alertConfig.getOk(), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
-                if(dialogsResult != null){
+
+                if(dialogsResult != null)
+                {
                     dialogsResult.onResult(true);
                 }
             }
         });
+
         alertDialog.show();
     }
 
@@ -28,18 +32,26 @@ public class Dialogs {
         AlertDialog confirmDialog = new AlertDialog.Builder(context).create();
         confirmDialog.setTitle(confirmConfig.getTitle());
         confirmDialog.setMessage(confirmConfig.getMessage());
+
         confirmDialog.setButton(AlertDialog.BUTTON_POSITIVE, confirmConfig.getOk(), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
-                if(dialogsResult != null){
+
+                if(dialogsResult != null)
+                {
                     dialogsResult.onResult(true);
                 }
+
             }
         });
+
         confirmDialog.setButton(AlertDialog.BUTTON_NEGATIVE, confirmConfig.getCancel(), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
-                if(dialogsResult != null){
+
+                if(dialogsResult != null)
+                {
                     dialogsResult.onResult(false);
                 }
+
             }
         });
         confirmDialog.show();
