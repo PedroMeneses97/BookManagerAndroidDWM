@@ -6,6 +6,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -88,6 +89,9 @@ public class LoginActivity extends AppCompatActivity {
 
         editor.putBoolean(Constants.REMEMBER, cbRemember.isChecked());
         editor.apply();
+
+        Intent intent = new Intent (getApplicationContext(), MainActivity.class);
+        startActivity(intent);
 
     }
 

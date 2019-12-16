@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_ImagemBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:tint="@color/colorPrimaryDark"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/book_open" />
+
+    <TextView
+        android:id="@+id/tv_Titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="6dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/tv_Pages"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toEndOf="@+id/iv_ImagemBook"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Delete"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Titulo" />
+
+    <TextView
+        android:id="@+id/tv_Pages"
+        android:layout_width="76dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_Delete"
+        android:layout_width="76dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Pages" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Delete" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
