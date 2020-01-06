@@ -1,5 +1,6 @@
 package pt.ipca.androidbookdwm.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private BookManagerApp bmApp;
     private BookAdapter bkAdapter;
-
+    //OASDOAOSDOASOO
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,13 +58,14 @@ public class MainActivity extends AppCompatActivity {
         });
                 recyclerView.setAdapter(bkAdapter);
 
+        //Criar um novo produto
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Book book = new Book("Rui Cruz o Triste","Advogado Cruz",29,R.drawable.book_open);
-                bmApp.addBook(book);
-                bkAdapter.notifyDataSetChanged();
+                Intent intent = new Intent (getApplicationContext(), CreateProductActivity.class);
+                startActivity(intent);
+
             }
         });
 
@@ -73,4 +75,5 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Book Manager");
     }
+
 }

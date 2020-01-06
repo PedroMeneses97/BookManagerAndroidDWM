@@ -2,7 +2,6 @@ package pt.ipca.androidbookdwm.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,10 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.CheckBox;
-
-
 import com.google.android.material.snackbar.Snackbar;
-
 import pt.ipca.androidbookdwm.R;
 import pt.ipca.androidbookdwm.dialogs.AlertConfig;
 import pt.ipca.androidbookdwm.dialogs.Dialogs;
@@ -116,6 +112,7 @@ public class LoginActivity extends AppCompatActivity {
     {
         Intent intent = new Intent (getApplicationContext(), CreateUserActivity.class);
         startActivity(intent);
+
     }
 
     //As minhas preferencias

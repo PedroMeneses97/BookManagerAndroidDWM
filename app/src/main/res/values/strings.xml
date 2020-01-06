@@ -29,5 +29,12 @@
     <string name="user_created_without_success">Impossible to create this user, please try again</string>
     <string name="title_activity_main">MainActivity</string>
 
+    <!-- Spinner -->
+    <string-array name="dropdownlist_unidade">
+        <item>un</item>
+        <item>kg</item>
+    </string-array>
+    <string name="title_activity_create_product">CreateProductActivity</string>
+
 
 </resources>

@@ -11,8 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".activities.CreateProductActivity"
+            android:label="@string/title_activity_create_product"></activity>
+        <activity
             android:name=".activities.MainActivity"
-            android:label="@string/title_activity_main"></activity>
+            android:label="@string/title_activity_main" />
         <activity android:name=".activities.CreateUserActivity" />
         <activity android:name=".activities.LoginActivity">
             <intent-filter>
