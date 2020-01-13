@@ -2,29 +2,27 @@ package pt.ipca.androidbookdwm.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.View;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import pt.ipca.androidbookdwm.BookManagerApp;
+import pt.ipca.androidbookdwm.ProductManagerApp;
 import pt.ipca.androidbookdwm.R;
-import pt.ipca.androidbookdwm.adapters.BookAdapter;
+import pt.ipca.androidbookdwm.adapters.ProductAdapter;
 import pt.ipca.androidbookdwm.interfaces.OnItemResult;
-import pt.ipca.androidbookdwm.models.Book;
 
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private RecyclerView recyclerView;
-    private BookManagerApp bmApp;
-    private BookAdapter bkAdapter;
+
+    private ProductManagerApp pmApp;
+    private ProductAdapter pdAdapter;
     //OASDOAOSDOASOO
 
     @Override
@@ -34,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setUpToolbar();
 
-        bmApp = ((BookManagerApp) getApplication());
+        pmApp = ((ProductManagerApp) getApplication());
         recyclerView = findViewById(R.id.books_recycler_view);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -42,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         recyclerView.setLayoutManager(layoutManager);
-        bkAdapter = new BookAdapter(bmApp.getLstBooks(), new OnItemResult() {
+        pdAdapter = new ProductAdapter(pmApp.getLstProduct(), new OnItemResult() {
             @Override
             public void onItemSelected(int position)
             {
@@ -51,12 +49,12 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onItemDeleted(int position) {
-                bmApp.removeBook(position);
-                bkAdapter.notifyItemRemoved(position);
+                pmApp.removeProduct(position);
+                pdAdapter.notifyItemRemoved(position);
                 /*bkAdapter.notifyDataSetChanged();*/
             }
         });
-                recyclerView.setAdapter(bkAdapter);
+                recyclerView.setAdapter(pdAdapter);
 
         //Criar um novo produto
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -73,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
     void setUpToolbar() {
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Book Manager");
+        getSupportActionBar().setTitle("Product Manager");
     }
 
 }

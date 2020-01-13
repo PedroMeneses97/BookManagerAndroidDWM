@@ -3,12 +3,13 @@ package pt.ipca.androidbookdwm;
 public class Product {
 
     //Variaveis
-    private String name, description, picture, category, unityType;
-    private Float price;
+    private String name, description, category, unityType;
+    private int picture;
+    private int price;
     private Category cat1;
 
     //Construtor
-    public Product(String name, String description, String picture, Float price, String unityType, Category cat1) {
+    public Product(String name, String description, int picture, int price, String unityType, Category cat1) {
         this.name = name;
         this.description = description;
         this.picture = picture;
@@ -26,7 +27,7 @@ public class Product {
         return description;
     }
 
-    public String getPicture() {
+    public int getPicture() {
         return picture;
     }
 
@@ -42,7 +43,7 @@ public class Product {
         return cat1.getColor();
     }
 
-    public Float getPrice() {
+    public int getPrice() {
         return price;
     }
 
@@ -58,7 +59,7 @@ public class Product {
         this.description = description;
     }
 
-    public void setPicture(String picture) {
+    public void setPicture(int picture) {
         this.picture = picture;
     }
 
@@ -66,7 +67,7 @@ public class Product {
         this.category = category;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 

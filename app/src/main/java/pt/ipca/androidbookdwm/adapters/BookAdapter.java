@@ -74,11 +74,10 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
         {
             super(itemView);
 
-            buttonIcon = itemView.findViewById(R.id.iv_ImagemBook);
-            title = itemView.findViewById(R.id.tv_Titulo);
-            author = itemView.findViewById(R.id.tv_Author);
-            pages = itemView.findViewById(R.id.tv_Pages);
-            deleteButton = itemView.findViewById(R.id.btn_Delete);
+            buttonIcon = itemView.findViewById(R.id.iv_ImagemProduto);
+            title = itemView.findViewById(R.id.tv_nomeProduto);
+            author = itemView.findViewById(R.id.tv_preco);
+
 
         }
 

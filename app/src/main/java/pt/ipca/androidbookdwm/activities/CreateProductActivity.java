@@ -24,9 +24,6 @@ public class CreateProductActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-
-
-
         Spinner spinner = (Spinner) findViewById(R.id.spinnerUnidade);
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
